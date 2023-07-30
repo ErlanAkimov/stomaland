@@ -1,0 +1,13 @@
+.footer {
+	max-width: 1440px;
+	height: 600px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer__red-line {
+	background-color: #ff5963;
+	width: 400px;
+	height: 600px;
+	position: relative;
+}
