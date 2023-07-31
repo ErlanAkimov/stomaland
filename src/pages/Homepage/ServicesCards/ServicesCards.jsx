@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
+import styles from './ServicesCards.scss'
 
 function ServicesCards({ props }) {
 	return (
 		<div className='content'>
 			{props.map((item) => {
 				return (
-					<div key={item.id} className="card">
+					<div key={item.id} className='card'>
 						<h2 className="card__title">{item.title}</h2>
 						<p className="card__text">
                             {item.text}

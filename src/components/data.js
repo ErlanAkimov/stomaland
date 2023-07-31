@@ -49,3 +49,44 @@ export const benefits = [
 		text: 'Специалисты нашего центра применяют сертифицированные материалы и одноразовые дентальные инструменты, доказавшие свою эффективность и безопасность при клинических исследованиях.',
 	},
 ];
+
+export const doctors = [
+    {
+        id: '1',
+        name: 'Белик Владимир Викторович',
+        specialities: [],
+        experience: '',
+        education: [],
+        courses: [],
+        schedule1: [],
+        achieves: '',
+
+    },
+    {
+        id: '',
+        name: '',
+        specialities: '',
+        experience: '',
+        education: '',
+        courses: '',
+        schedule1: '',
+        schedule2: '',
+        schedule3: '',
+        achieves: '',
+
+    },
+    {
+        id: '',
+        name: '',
+        specialities: '',
+        experience: '',
+        education: '',
+        courses: '',
+        schedule1: '',
+        schedule2: '',
+        schedule3: '',
+        achieves: '',
+
+
+    },
+]

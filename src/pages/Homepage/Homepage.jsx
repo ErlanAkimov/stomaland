@@ -17,7 +17,7 @@ function Homepage() {
             <ServicesCards props={servicesCards} />
 
 			<div className="all-services-btn">
-				<Link to="">
+				<Link to="/services">
 					<button className="btn-hover">Все услуги</button>
 				</Link>
 			</div>
