@@ -7,6 +7,7 @@ import ServicesCards from './ServicesCards/ServicesCards';
 
 import implant from '../../assets/images/anyridge.png';
 import WhyWe from './WhyWe/WhyWe';
+import DoctorsBanner from '../../components/DoctorsBanner/DoctorsBanner';
 
 function Homepage() {
 
@@ -21,7 +22,7 @@ function Homepage() {
 					<button className="btn-hover">Все услуги</button>
 				</Link>
 			</div>
-
+			<DoctorsBanner />
             <WhyWe props={benefits} />
 		</div>
 	);
