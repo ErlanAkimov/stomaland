@@ -1,13 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Homepage.scss';
+
+
+// Components
 import Banner from '../../components/Banner/Banner';
-import { benefits, servicesCards } from '../../components/data';
 import ServicesCards from './ServicesCards/ServicesCards';
+import DoctorsBanner from '../../components/DoctorsBanner/DoctorsBanner';
+import WhyWe from './WhyWe/WhyWe';
+import LicenseBar from './LicenseBar/LicenseBar';
+
+
+
+import { benefits, servicesCards } from '../../components/data';
+
 
 import implant from '../../assets/images/anyridge.png';
-import WhyWe from './WhyWe/WhyWe';
-import DoctorsBanner from '../../components/DoctorsBanner/DoctorsBanner';
+
+
 
 function Homepage() {
 
@@ -23,6 +33,7 @@ function Homepage() {
 				</Link>
 			</div>
 			<DoctorsBanner />
+			<LicenseBar />
             <WhyWe props={benefits} />
 		</div>
 	);
