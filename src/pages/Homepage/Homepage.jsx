@@ -14,11 +14,6 @@ import LicenseBar from './LicenseBar/LicenseBar';
 
 import { benefits, servicesCards } from '../../components/data';
 
-
-import implant from '../../assets/images/anyridge.png';
-
-
-
 function Homepage() {
 
 
@@ -33,7 +28,6 @@ function Homepage() {
 				</Link>
 			</div>
 			<DoctorsBanner />
-			<LicenseBar />
             <WhyWe props={benefits} />
 		</div>
 	);

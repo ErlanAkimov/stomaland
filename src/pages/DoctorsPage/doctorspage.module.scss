@@ -1,0 +1,17 @@
+.wrapper {
+	margin-top: 120px;
+	max-width: 1440px;
+	padding-inline: 50px;
+	margin-inline: auto;
+    display: flex;
+flex-direction: column;
+row-gap: 40px;
+padding-bottom: 90px;
+}
+
+.page_title {
+    font-size: 36px;
+    font-weight: 600;
+    background-color: #fafafa;
+}
+

@@ -10,5 +10,26 @@
 	flex-wrap: wrap;
 }
 
+.btn-hover {
+	transition: 0.1s ease-in-out;
+	&:hover {
+		background-color: #2ca1ae;
+		color: #e4f0f1;
+		box-shadow: 0 0 10px #56ddec;
+		border: 1px solid #2ca1ae;
+	}
+}
 
+.all-services-btn {
+	margin: 0 auto;
+	width: 400px;
+	padding-bottom: 30px;
 
+	button {
+		width: 100%;
+		border: 1px solid rgb(209, 208, 208);
+		padding: 10px 50px;
+		border-radius: 30px;
+		cursor: pointer;
+	}
+}

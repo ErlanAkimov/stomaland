@@ -14,7 +14,8 @@ function App() {
 				{/* <SearchLine /> */}
           <Routes>
             <Route exact path='/' element={<Homepage />} />
-            <Route exact path='/our-doctors' element={<DoctorsPage />} />
+            <Route exact path='/doctors' element={<DoctorsPage />} />
+            <Route exact path='/doctors/:path' element={<DoctorPersonalPage />} />
           </Routes>
 				<Footer />
 		</BrowserRouter>

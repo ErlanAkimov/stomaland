@@ -20,7 +20,7 @@ function Header() {
 						</div>
 					</Link>
 					<ul className="nav">
-						<Link to="/our-doctors">
+						<Link to="/doctors">
 							<li>Врачи</li>
 						</Link>
 						<li>Услуги</li>
