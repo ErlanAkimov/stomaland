@@ -14,7 +14,25 @@ function DoctorPersonalPage() {
 		<div className={styles.wrapper}>
 			<div className={styles.img_side}>
 				<img className={styles.main_image} src={doctor.img_full} alt="" />
-				<div className={styles.position}>{doctor.position}</div>
+
+				<div className={styles.img_btns}>
+					<div className={styles.position}>{doctor.position}</div>
+					<div className={styles.calendar}>
+						<div className={styles.calendar_days}>
+							{doctor.schedule_days.map((item, index) => {
+								return <p key={index}>{item}</p>;
+							})}
+						</div>
+
+						<div className={styles.calendar_times}>
+							{doctor.schedule_time.map((item, index) => {
+								return <p key={index}>{item}</p>;
+							})}
+						</div>
+					</div>
+
+					<button className={styles.btn}>Записаться</button>
+				</div>
 			</div>
 			<div className={styles.text_side}>
 				<div className={styles.text}>
@@ -39,13 +57,11 @@ function DoctorPersonalPage() {
 					{doctor.courses && (
 						<>
 							<h4 className={styles.edu_title}>Курсы повышения квалификации:</h4>
-                            <ul className={styles.courses_list}>
-                                {
-                                    doctor.courses.map((course, index) => {
-                                        return <li className={styles.courses_item}>{course}</li>
-                                    })
-                                }
-                            </ul>
+							<ul className={styles.courses_list}>
+								{doctor.courses.map((course, index) => {
+									return <li className={styles.courses_item}>{course}</li>;
+								})}
+							</ul>
 						</>
 					)}
 				</div>
