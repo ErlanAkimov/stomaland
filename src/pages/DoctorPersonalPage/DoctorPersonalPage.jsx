@@ -30,11 +30,24 @@ function DoctorPersonalPage() {
 							return (
 								<div key={index} className={styles.edu_item}>
 									<h3>{item}</h3>
-                                    <p className={styles.edu_text}>{doctor.education[index]}</p>
+									<p className={styles.edu_text}>{doctor.education[index]}</p>
 								</div>
 							);
 						})}
 					</div>
+
+					{doctor.courses && (
+						<>
+							<h4 className={styles.edu_title}>Курсы повышения квалификации:</h4>
+                            <ul className={styles.courses_list}>
+                                {
+                                    doctor.courses.map((course, index) => {
+                                        return <li className={styles.courses_item}>{course}</li>
+                                    })
+                                }
+                            </ul>
+						</>
+					)}
 				</div>
 			</div>
 		</div>

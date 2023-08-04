@@ -82,5 +82,13 @@
     max-width: 60%;
 }
 
-
+.courses_list {
+    margin-left: 10px;
+    margin-top: 20px;
+    list-style-type: "- ";
+    list-style-position: outside;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}
 
