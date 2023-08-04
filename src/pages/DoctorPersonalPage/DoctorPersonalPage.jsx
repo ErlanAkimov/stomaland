@@ -14,14 +14,14 @@ function DoctorPersonalPage() {
 		<div className={styles.wrapper}>
 			<div className={styles.img_side}>
 				<img className={styles.main_image} src={doctor.img_full} alt="" />
-				<div className={styles.experience}>{doctor.position}</div>
+				<div className={styles.position}>{doctor.position}</div>
 			</div>
 			<div className={styles.text_side}>
 				<div className={styles.text}>
 					<h3 className={styles.department}>{doctor.department}</h3>
 					<h1 className={styles.name}>{doctor.name}</h1>
 					<h3 className={styles.spec}>{doctor.specialization}</h3>
-					<p className={styles.position}>
+					<p className={styles.experience}>
 						Стаж профессиональной деятельности: {doctor.experience}
 					</p>
 					<h4 className={styles.edu_title}>Образование</h4>

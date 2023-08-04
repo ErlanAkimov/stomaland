@@ -39,21 +39,23 @@
             opacity: .8;
         }
 
-        .position {
+        .experience {
             border-radius: 60px;
             margin-top: 10px;
             font-size: 16px;
+            
         }
     }
 }
 
-.experience {
+.position {
     font-weight: 500;
     font-size: 16px;
     margin-top: 10px;
     border-radius: 5px;
     background-color: #f2f9fa;
     padding: 10px 20px;
+    text-align: center;
 }
 
 .edu_items {
