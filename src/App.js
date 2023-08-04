@@ -7,6 +7,8 @@ import Homepage from './pages/Homepage/Homepage.jsx';
 import DoctorsPage from './pages/DoctorsPage/DoctorsPage.jsx';
 import SearchLine from './components/SearchLine/SearchLine.jsx'
 
+import DoctorPersonalPage from './pages/DoctorPersonalPage/DoctorPersonalPage';
+
 function App() {
 	return (
 		<BrowserRouter>

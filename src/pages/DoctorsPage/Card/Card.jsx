@@ -26,7 +26,7 @@ function Card({ props }) {
 				<div className={styles.schedule}>
 					<div className={styles.data}>
 						{props.schedule_days.map((item, index) => {
-							return <p key={index}>{item}<p className={styles.remark}>{item === 'Сб' ? props.schedule_remark : null}</p></p>;
+							return <div key={index}>{item}<p className={styles.remark}>{item === 'Сб' ? props.schedule_remark : null}</p></div>;
 						})}
 					</div>
 
