@@ -59,7 +59,7 @@ function DoctorPersonalPage() {
 							<h4 className={styles.edu_title}>Курсы повышения квалификации:</h4>
 							<ul className={styles.courses_list}>
 								{doctor.courses.map((course, index) => {
-									return <li className={styles.courses_item}>{course}</li>;
+									return <li key={index} className={styles.courses_item}>{course}</li>;
 								})}
 							</ul>
 						</>

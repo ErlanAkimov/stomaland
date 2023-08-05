@@ -28,6 +28,7 @@ function Homepage() {
 				</Link>
 			</div>
 			<DoctorsBanner />
+			<LicenseBar />
             <WhyWe props={benefits} />
 		</div>
 	);

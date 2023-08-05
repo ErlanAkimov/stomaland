@@ -4,7 +4,16 @@ import { Link } from 'react-router-dom';
 
 function Header() {
 	return (
-		<div style={{backgroundColor:'#fff', position: 'fixed', top: '0', zIndex: '100', width: '100%', borderBottom: '1px solid rgba(238, 238, 238,.5)'}}>
+		<div
+			style={{
+				backgroundColor: '#fff',
+				position: 'fixed',
+				top: '0',
+				zIndex: '100',
+				width: '100%',
+				borderBottom: '1px solid rgba(238, 238, 238,.5)',
+			}}
+		>
 			<header className="header">
 				<div className="l-side">
 					<Link to="/">

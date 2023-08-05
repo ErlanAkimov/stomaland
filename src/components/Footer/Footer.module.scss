@@ -107,7 +107,9 @@
 		img {
 			margin: 0 auto;
 		}
-		.logo_disclamer {display: none;}
+		.logo_disclamer {
+			display: none;
+		}
 	}
 	.r_side {
 		text-align: left;
@@ -115,9 +117,27 @@
 		order: -1;
 	}
 	.info {
+		text-align: left;
+		width: fit-content;
 		p {
 			flex-direction: row-reverse;
-			justify-content: start;
-		}
+			width: fit-content;
+			text-align: left;		}
+	}
+}
+
+@media screen and (max-width: 701px) {
+	.footer {
+		padding-inline: 30px;
+	}
+}
+
+@media screen and (max-width: 426px) {
+	.footer {
+		padding-inline: 20px;
+	}
+
+	.l-side {
+		width: fit-content;
 	}
 }
