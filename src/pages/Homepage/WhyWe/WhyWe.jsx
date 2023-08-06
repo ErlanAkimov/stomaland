@@ -1,31 +1,21 @@
-import React from "react";
-import './WhyWe.scss';
+import React from 'react';
+import styles from './WhyWe.module.scss';
 
-function WhyWe({props}) {
-    const [isHided, setIsHided] = React.useState({});
-    const toggleHeight = (itemId) => {
-        setIsHided((prevValue) => ({
-            ...prevValue,
-            [itemId]: !prevValue[itemId],
-        }));
-    };
-
+function WhyWe({ props }) {
+	const [open, setOpen] = React.useState(false);
+	const ShowElement = () => {
+		setOpen((prevOpen) => !prevOpen);
+	};
 
 	return (
 		<div>
 			<h1 className="title">Почему мы?</h1>
 
-			<div className="qa-block ">
+			<div className={styles.wrapper}>
 				{props.map((item) => {
 					return (
-						<div
-							key={item.id}
-							className={`qa-item ${isHided[item.id] ? 'hided' : ''}`}
-							onClick={() => {
-								toggleHeight(item.id);
-							}}
-						>
-							<div className="qa-open-side">
+						<div key={item.id} className={styles.flex_wrapper}>
+							<div onClick={ShowElement} className={styles.show_side}>
 								<h2 className="qa-title">{item.title}</h2>
 								<div className="qa-close">
 									<div className="qa-close-hor"></div>
@@ -33,7 +23,10 @@ function WhyWe({props}) {
 								</div>
 							</div>
 
-							<div className="qa-close-side">
+							<div
+								className={styles.close_side}
+								style={{ maxHeight: open ? '200px' : '0' }}
+							>
 								<p>{item.text}</p>
 							</div>
 						</div>

@@ -1,0 +1,30 @@
+.wrapper {
+	max-width: 1440px;
+	padding: 0 50px 1000px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+}
+
+.flex_wrapper {
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+}
+
+.show_side {
+	padding: 10px 30px;
+	border-radius: 60px;
+	border: 1px solid rgb(158, 158, 158);
+
+	* {
+		pointer-events: none;
+	}
+}
+
+.close_side {
+	padding: 0 40px;
+	overflow: hidden;
+	transition: 0.3s ease-in-out;
+}

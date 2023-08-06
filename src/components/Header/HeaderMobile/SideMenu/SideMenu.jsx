@@ -21,7 +21,7 @@ function SideMenu({}) {
 			</h1>
 
 			<ul className={styles.nav}>
-				<Link to="/doctors">
+				<Link to="/doctors" onClick={HideMenu}>
 					<li>Врачи</li>
 				</Link>
 				<li>Услуги</li>

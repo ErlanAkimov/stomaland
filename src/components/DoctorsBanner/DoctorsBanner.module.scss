@@ -50,9 +50,9 @@
 }
 
 @media screen and (max-width: 950px) {
-    .outer_wrapper {
-        margin-top: 40px;
-    }
+	.outer_wrapper {
+		margin-top: 40px;
+	}
 	.doctors_img {
 		right: 30px;
 		width: 250px;
@@ -60,5 +60,33 @@
 
 	.title {
 		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 675px) {
+	.outer_wrapper {
+		padding: 0 20px;
+		margin-top: 30px;
+	}
+
+	.doctors_img {
+		width: 140px;
+		right: 0;
+	}
+
+	.banner {
+		padding: 20px;
+		border-radius: 15px;
+	}
+
+	.title {
+		font-size: 15px;
+		width: 62%;
+	}
+
+	.btn {
+		border-radius: 2px;
+		font-size: 12px;
+		padding: 6px 10px;
 	}
 }
