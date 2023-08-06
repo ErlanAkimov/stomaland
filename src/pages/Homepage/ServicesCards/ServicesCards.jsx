@@ -3,7 +3,7 @@ import styles from './ServicesCards.module.scss'
 
 function ServicesCards({ props }) {
 	return (
-		<div className='content'>
+		<div className={styles.content}>
 			{props.map((item) => {
 				return (
 					<div key={item.id} className={styles.card}>

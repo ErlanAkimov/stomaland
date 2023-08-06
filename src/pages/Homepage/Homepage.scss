@@ -1,17 +1,7 @@
-.content {
-	max-width: 1440px;
-	margin-inline: auto;
-	padding: 70px 0 30px;
-	padding-inline: 50px;
-	display: flex;
-	justify-content: center;
-	column-gap: 50px;
-	row-gap: 50px;
-	flex-wrap: wrap;
-}
 
 .btn-hover {
 	transition: 0.1s ease-in-out;
+	width: 100%;
 	&:hover {
 		background-color: #2ca1ae;
 		color: #e4f0f1;
@@ -31,5 +21,12 @@
 		padding: 10px 50px;
 		border-radius: 30px;
 		cursor: pointer;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.all-services-btn {
+		width: 100%;
+		padding: 0 20px;
 	}
 }
