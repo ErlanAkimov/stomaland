@@ -1,40 +1,41 @@
 import React from 'react';
 import styles from './WhyWe.module.scss';
+import close from '../../../assets/images/close.png'
 
 function WhyWe({ props }) {
-	const [open, setOpen] = React.useState(false);
-	const ShowElement = () => {
-		setOpen((prevOpen) => !prevOpen);
-	};
+  const [openStates, setOpenStates] = React.useState(Array(props.length).fill(false));
+//   const [rotate, setRotate] = React.useState('rotate');
 
-	return (
-		<div>
-			<h1 className="title">Почему мы?</h1>
+  const toggleElement = (index) => {
+    setOpenStates((prevOpenStates) => {
+      const newOpenStates = [...prevOpenStates];
+      newOpenStates[index] = !newOpenStates[index];
+      return newOpenStates;
+    });
+  };
 
-			<div className={styles.wrapper}>
-				{props.map((item) => {
-					return (
-						<div key={item.id} className={styles.flex_wrapper}>
-							<div onClick={ShowElement} className={styles.show_side}>
-								<h2 className="qa-title">{item.title}</h2>
-								<div className="qa-close">
-									<div className="qa-close-hor"></div>
-									<div className="qa-close-vert"></div>
-								</div>
-							</div>
+  return (
+    <div>
+      <h1 className={styles.main_title}>Почему мы?</h1>
 
-							<div
-								className={styles.close_side}
-								style={{ maxHeight: open ? '200px' : '0' }}
-							>
-								<p>{item.text}</p>
-							</div>
-						</div>
-					);
-				})}
-			</div>
-		</div>
-	);
+      <div className={styles.wrapper}>
+        {props.map((item, index) => {
+          return (
+            <div key={item.id} className={styles.flex_wrapper}>
+              <div onClick={() => toggleElement(index)} className={styles.show_side}>
+                <h2 className={styles.title}>{item.title}</h2>
+				<img src={close} alt="" style={{transform: openStates[index] ? 'translateY(-50%) rotate(0)' : 'translateY(-50%) rotate(45deg)'}} />
+              </div>
+
+              <div className={styles.close_side} style={{ maxHeight: openStates[index] ? '400px' : '0' }}>
+                <p>{item.text}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
 }
 
 export default WhyWe;
