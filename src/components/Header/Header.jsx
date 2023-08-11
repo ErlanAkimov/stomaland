@@ -32,11 +32,21 @@ function Header() {
 						<Link to="/doctors">
 							<li>Врачи</li>
 						</Link>
-						<li>Услуги</li>
-						<li>Цены</li>
-						<li>Отзывы</li>
-						<li>Вакансии</li>
-						<li>Контакты</li>
+						<Link to="/uslugi">
+							<li>Услуги</li>
+						</Link>
+						<Link to="/price">
+							<li>Цены</li>
+						</Link>
+						<Link to="/reviews">
+							<li>Отзывы</li>
+						</Link>
+						<Link to="/job">
+							<li>Вакансии</li>
+						</Link>
+						<Link to="/contacts">
+							<li>Контакты</li>
+						</Link>
 					</ul>
 				</div>
 				<div className="contacts">

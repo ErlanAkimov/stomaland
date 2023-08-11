@@ -1,34 +1,46 @@
 import styles from './SideMenu.module.scss';
 import { Link } from 'react-router-dom';
 import close from '../../../../assets/images/close.png';
-import phone_icon from '../../../../assets/images/call.png'
 
 import { useContext } from 'react';
 import { Context } from '../../../../context';
 
-
 function SideMenu({}) {
 	const { menu, setMenu } = useContext(Context);
 	const HideMenu = () => {
+		window.scrollTo(0, 0)
 		setMenu('-100%');
+
 	};
 
 	return (
 		<div className={`${styles.wrapper}`} style={{ right: menu, transition: '.2s ease-in-out' }}>
-			<h1 className={styles.title}>
-				stoma<span>land</span>
-				<img onClick={HideMenu} src={close} alt="" />
-			</h1>
+			<Link to="/" onClick={HideMenu}>
+				<h1 className={styles.title}>
+					stoma<span>land</span>
+					<img onClick={HideMenu} src={close} alt="" />
+				</h1>
+			</Link>
 
 			<ul className={styles.nav}>
 				<Link to="/doctors" onClick={HideMenu}>
 					<li>Врачи</li>
 				</Link>
-				<li>Услуги</li>
-				<li>Цены</li>
-				<li>Отзывы</li>
-				<li>Вакансии</li>
-				<li>Контакты</li>
+				<Link to="/uslugi" onClick={HideMenu}>
+					<li>Услуги</li>
+				</Link>
+				<Link to="/price" onClick={HideMenu}>
+					<li>Цены</li>
+				</Link>
+				<Link to="/reviews" onClick={HideMenu}>
+					<li>Отзывы</li>
+				</Link>
+				<Link to="/job" onClick={HideMenu}>
+					<li>Вакансии</li>
+				</Link>
+				<Link to="/contacts" onClick={HideMenu}>
+					<li>Контакты</li>
+				</Link>
 			</ul>
 
 			<h6 className={styles.schedule_title}>График работы:</h6>

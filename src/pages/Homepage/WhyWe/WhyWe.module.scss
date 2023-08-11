@@ -24,6 +24,7 @@
 	border-radius: 60px;
 	border: 1px solid rgb(192, 190, 190);
 	position: relative;
+	cursor: pointer;
 
 	img {
 		position: absolute;
@@ -39,12 +40,16 @@
 .close_side {
 	padding: 0 40px;
 	overflow: hidden;
-	transition: 0.5s ease-in-out;
+	transition: max-height 0.2s ease-in-out;
 }
 
 @media screen and (max-width: 701px) {
 	.title {
 		font-size: 16px;
+	}
+
+	.wrapper {
+		padding-inline: 20px;
 	}
 
 	.show_side {

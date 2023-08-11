@@ -120,3 +120,64 @@
     @extend .data;
     text-align: right;
 }
+
+@media screen and (max-width: 1060px) {
+    .wrapper {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+}
+
+@media screen and (max-width: 701px) {
+    .wrapper {
+        padding: 20px 20px;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .wrapper {
+        padding: 10px;
+        row-gap: 25px;
+    }
+    .left_side {
+        column-gap: 14px;
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    .department {
+        font-size: 10px;
+    }
+
+    .name {
+        margin-top: 0;
+        font-size: 16px;
+    }
+
+    .specialization {
+        font-size: 13px;
+        margin-top: 0;
+    }
+
+    .title_tier3 {
+        margin-top: 10px;
+        font-size: 13px;
+    }
+
+    .experience {
+        font-size: 14px;
+    }
+
+    .right_side {
+        padding: 5px;
+    }
+
+    .schedule {
+        padding: 5px;
+        width: 100%;
+        column-gap: 0px;
+    }
+    
+}

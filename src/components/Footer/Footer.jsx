@@ -17,7 +17,7 @@ function Footer() {
 							<Link to="/doctors">
 								<p>Врачи</p>
 							</Link>
-							<Link to="/services">
+							<Link to="/uslugi">
 								<p>Услуги</p>
 							</Link>
 							<Link to="/price">
@@ -29,7 +29,7 @@ function Footer() {
 							<Link to="/reviews">
 								<p>Отзывы</p>
 							</Link>
-							<Link to="/vacancies">
+							<Link to="/job">
 								<p>Вакансии</p>
 							</Link>
 							<Link to="/contacts">

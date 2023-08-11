@@ -5,21 +5,25 @@ import Footer from './components/Footer/Footer.jsx';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { Provider } from './context';
 
-import Homepage from './pages/Homepage/Homepage.jsx';
-import DoctorsPage from './pages/DoctorsPage/DoctorsPage.jsx';
-import SearchLine from './components/SearchLine/SearchLine.jsx';
-import React from 'react';
-
+// Pages
+import Homepage from './pages/Homepage/Homepage';
+import DoctorsPage from './pages/DoctorsPage/DoctorsPage';
 import DoctorPersonalPage from './pages/DoctorPersonalPage/DoctorPersonalPage';
-import { useState, useEffect } from 'react';
+import UslugiPage from './pages/UslugiPage/UslugiPage';
+// import SearchLine from './components/SearchLine/SearchLine.jsx';
+
+
+
+// React imports
+import React from 'react';
 import SideMenu from './components/Header/HeaderMobile/SideMenu/SideMenu';
 
 function App() {
 
 
-	const [header, setHeader] = useState();
+	const [header, setHeader] = React.useState();
 	//  Динамическая проверка ширины экрана, для вставки хэдера
-	useEffect(() => {
+	React.useEffect(() => {
 		headerChooser();
 		const handleResize = () => {
 			headerChooser();
@@ -39,6 +43,7 @@ function App() {
 					<Route exact path="/" element={<Homepage />} />
 					<Route exact path="/doctors" element={<DoctorsPage />} />
 					<Route exact path="/doctors/:path" element={<DoctorPersonalPage />} />
+					<Route path="/uslugi" element={<UslugiPage />} />
 				</Routes>
 				<Footer />
 			</BrowserRouter>

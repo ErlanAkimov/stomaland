@@ -75,6 +75,24 @@
 	}
 }
 
+@media screen and (max-width: 900px) {
+	.content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.card {
+		height: 220px;
+
+		&__btn {
+			margin-top: 0px;
+			border-radius: 5px;
+			font-size: 12px;
+			width: 250px;
+		}
+	}
+}
+
 @media screen and (max-width: 575px) {
 	.content {
 		padding: 30px 20px;
@@ -96,9 +114,7 @@
 			hyphens: auto;
 		}
 		&__btn {
-			border-radius: 5px;
-			font-size: 12px;
-			
+
 		}
 
 		&__img {
