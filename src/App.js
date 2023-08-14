@@ -40,7 +40,7 @@ function App() {
 		<Provider>
 			<BrowserRouter>
 				
-				{modal ? <Modal /> : <Modal />}
+				{modal ? <Modal closeModal={closeModal} /> : null}
 				
 				{header}
 				{/* <SearchLine /> */}
@@ -57,6 +57,10 @@ function App() {
 
 	function openModal() {
 		setModal(true);
+	}
+
+	function closeModal() {
+		setModal(false)
 	}
 
 	function headerChooser() {

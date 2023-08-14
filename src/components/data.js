@@ -131,7 +131,7 @@ export const stuff = [
 		img_full: doc3,
 		department: 'Терапевтическая стоматология, ортодонтия',
 		specialization: 'Врач-стоматолог-терапевт-ортодонт',
-		experience: 'Более 17 лет',
+		experience: 'Более 5 лет',
 		schedule_days: ['Пн - Пт', 'Сб'],
 		schedule_time: ['с 9-00 до 18-00', 'с 10-00 до 15-00'],
 		schedule_remark: '*по записи',

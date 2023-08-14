@@ -1,10 +1,10 @@
 import styles from './modal.module.scss';
 // import 
 
-function Modal() {
+function Modal({closeModal}) {
 	return (
 		<div className={styles.main}>
-			<div className={styles.overlay}></div>
+			<div className={styles.overlay} onClick={closeModal}></div>
             <div className={styles.modal_wrapper}>
                 <h2 className={styles.title}>
                     Оставьте заявку, мы вам перезвоним
