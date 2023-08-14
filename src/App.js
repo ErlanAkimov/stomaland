@@ -17,6 +17,7 @@ import UslugiPage from './pages/UslugiPage/UslugiPage';
 // React imports
 import React from 'react';
 import SideMenu from './components/Header/HeaderMobile/SideMenu/SideMenu';
+import Modal from './components/Modal/Modal.jsx'
 
 function App() {
 
@@ -33,21 +34,30 @@ function App() {
 		};
 	}, []);
 
+	const [modal, setModal] = React.useState(false);
+
 	return (
 		<Provider>
 			<BrowserRouter>
+				
+				{modal ? <Modal /> : <Modal />}
+				
 				{header}
 				{/* <SearchLine /> */}
 				<Routes>
 					<Route exact path="/" element={<Homepage />} />
 					<Route exact path="/doctors" element={<DoctorsPage />} />
 					<Route exact path="/doctors/:path" element={<DoctorPersonalPage />} />
-					<Route path="/uslugi" element={<UslugiPage />} />
+					<Route path="/uslugi" element={<UslugiPage openModal={openModal} />} />
 				</Routes>
 				<Footer />
 			</BrowserRouter>
 		</Provider>
 	);
+
+	function openModal() {
+		setModal(true);
+	}
 
 	function headerChooser() {
 		if (window.innerWidth < 1365) {

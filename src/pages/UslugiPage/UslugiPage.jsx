@@ -7,7 +7,7 @@ import { Context } from '../../context';
 import { data, titles, all } from './data';
 import search_404 from '../../assets/images/404-search.png';
 
-function UslugiPage() {
+function UslugiPage({openModal}) {
 	const [active_list, setActive_list] = React.useState([]);
 	const [haveAny, setHaveAny] = React.useState(false);
 	const { setSearchResult, searchResult, inputValue } = React.useContext(Context);
@@ -109,7 +109,7 @@ function UslugiPage() {
 										<img className={styles.img} src={item.img} alt="" />
 										<p className={styles.description}>{item.description}</p>
 										<div className={styles.buttons}>
-											<button className={styles.letsGo}>Записаться</button>
+											<button onClick={openModal} className={styles.letsGo}>Записаться</button>
 											<button className={styles.goToPrice}>Прайс</button>
 										</div>
 									</div>

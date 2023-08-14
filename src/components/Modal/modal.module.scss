@@ -1,0 +1,78 @@
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.4);
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.modal_wrapper {
+    background-color: #fff;
+    width: 740px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 40px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
+}
+
+.input_block {
+    border: 1px solid rgb(199, 199, 199);
+    display: flex;
+    column-gap: 20px;
+    padding: 10px 20px;
+    border-radius: 7px;
+    width: 100%;
+
+    input, textarea {
+        resize: none;
+        outline: none;
+        height: 100%;
+        width: 100%;
+        font-size: 17px;
+    }
+
+    textarea {
+        height: 140px;
+    }
+}
+
+.btn {
+    padding: 10px 40px;
+    background-color: #2CA1AE;
+    width: 100%;
+    color: white;
+    margin-top: 10px;
+    margin-inline: auto;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.policy {
+    font-size: 14px;
+    width: 80%;
+    margin: 0 auto 0;
+    opacity: .6;
+}
