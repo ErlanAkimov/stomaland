@@ -18,7 +18,7 @@ export const servicesCards = [
 		title: 'Лечение зубов',
 		text: 'Профессиональное лечение зубов квалифицированными врачами с гарантией качества.',
 		btn_text: 'Записаться к врачу',
-		btn_link: '',
+		btn_link: '/doctors',
 		img: '',
 	},
 	{
@@ -26,7 +26,7 @@ export const servicesCards = [
 		title: 'Протезирование',
 		text: 'Съемное и несъемное протезирование с использованием современных технологий и материалов',
 		btn_text: 'Выбрать протез',
-		btn_link: '',
+		btn_link: '/uslugi',
 		img: '',
 	},
 	{
@@ -34,7 +34,7 @@ export const servicesCards = [
 		title: 'Имплантация',
 		text: 'Дентальные импланты (а также AnyRidge) проверенные временем и рекомендованные профессионалами',
 		btn_text: 'Смотреть прайс',
-		btn_link: '',
+		btn_link: '/price',
 		img: '',
 	},
 ];

@@ -3,7 +3,7 @@ import Header from './components/Header/Header.jsx';
 import HeaderMobile from './components/Header/HeaderMobile/HeaderMobile.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { Provider } from './context';
+import {Provider} from './context';
 
 // Pages
 import Homepage from './pages/Homepage/Homepage';
@@ -19,7 +19,6 @@ import React from 'react';
 import SideMenu from './components/Header/HeaderMobile/SideMenu/SideMenu';
 
 function App() {
-
 
 	const [header, setHeader] = React.useState();
 	//  Динамическая проверка ширины экрана, для вставки хэдера

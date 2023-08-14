@@ -51,8 +51,8 @@ function Header() {
 				</div>
 				<div className="contacts">
 					<div className="numbers">
-						<a href="tel:+7 (383) 238-33-38 ">+7 (383) 238-33-38</a>
-						<a href="tel:+7 (923) 199-39-89 ">+7 (923) 199-39-89</a>
+						<a href="tel: +73832383338">+7 (383) 238-33-38</a>
+						<a href="tel: +79231993989">+7 (923) 199-39-89</a>
 					</div>
 					<div className="work-time">
 						<div>
