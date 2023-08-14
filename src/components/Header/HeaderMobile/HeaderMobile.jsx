@@ -15,10 +15,11 @@ function HeaderMobile() {
 			<div>
 				<img className={styles.logo_icon} src={logo_icon} alt="" />
 			</div>
-			<Link to="/">
+			<Link style={{position: 'relative'}} to="/">
 				<h1 className={styles.title}>
 					stoma<span>land</span>
 				</h1>
+				<p className={styles.logo_adress}>ул. Герцена 11/1</p>
 			</Link>
 			<div className={styles.r_side} onClick={ShowMenu}>
 				<div className={styles.burger_icon}>
