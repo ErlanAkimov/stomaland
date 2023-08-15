@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './job.module.scss';
 function JobPage() {
-	const vacancies = [{ position: 'Врач-стоматолог-хирург', time: 'Частичная занятость (2-3 дня в неделю)'}];
+	const vacancies = [/* { position: 'Врач-стоматолог-хирург', time: 'Частичная занятость (2-3 дня в неделю)'} */];
 
 	return (
 		<div className={styles.wrapper}>
@@ -14,7 +14,7 @@ function JobPage() {
 				</div>
 			) : (
 				vacancies.map((item, index) => {
-					return <div>{item}</div>;
+					return <div key={index}>{item.position}</div>;
 				})
 			)}
 

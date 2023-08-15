@@ -49,3 +49,29 @@
     font-size: 18px;
     font-weight: 500;
 }
+
+@media screen and (max-width: 812px) {
+    .offer {
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+    }
+}
+
+@media screen and (max-width: 701px) {
+    .wrapper {
+        padding-inline: 20px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .wrapper {
+        margin-top: 40px;
+    }
+    .h1 {
+        font-size: 52px;
+    }
+    .offer {
+        margin-top: 50px;
+    }
+}
