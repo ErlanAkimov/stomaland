@@ -16,7 +16,6 @@ function ContactsPage() {
 		<div className={styles.outer__wrapper}>
 			<iframe
 				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2290.7835714190846!2d82.9621212770943!3d54.95935675282365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dfe7c1810b6141%3A0xb8354123d042558e!2z0YPQuy4g0JPQtdGA0YbQtdC90LAsIDExINC60L7RgNC_0YPRgSAxLCDQndC-0LLQvtGB0LjQsdC40YDRgdC6LCDQndC-0LLQvtGB0LjQsdC40YDRgdC60LDRjyDQvtCx0LsuLCA2MzAwMzM!5e0!3m2!1sru!2sru!4v1692037240759!5m2!1sru!2sru"
-				loading="lazy"
 				referrerpolicy="no-referrer-when-downgrade"
 			></iframe>
 			<div className={styles.wrapper}>

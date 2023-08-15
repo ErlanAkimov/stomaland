@@ -11,6 +11,7 @@ import DoctorsPage from './pages/DoctorsPage/DoctorsPage';
 import DoctorPersonalPage from './pages/DoctorPersonalPage/DoctorPersonalPage';
 import UslugiPage from './pages/UslugiPage/UslugiPage';
 import ContactsPage from './pages/ContactsPage/ContactsPage';
+import JobPage from './pages/JobPage/JobPage'
 // import SearchLine from './components/SearchLine/SearchLine.jsx';
 
 
@@ -50,6 +51,7 @@ function App() {
 					<Route exact path="/doctors" element={<DoctorsPage />} />
 					<Route exact path="/doctors/:path" element={<DoctorPersonalPage />} />
 					<Route exact path="/contacts" element={<ContactsPage />} />
+					<Route exact path="/job" element={<JobPage />} />
 					<Route path="/uslugi" element={<UslugiPage openModal={openModal} />} />
 				</Routes>
 				<Footer />
