@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './uslugi.module.scss';
 import SearchLine from '../../components/SearchLine/SearchLine';
 import { Context } from '../../context';
+import { Link } from 'react-router-dom';
 
 // data
 import { data, titles, all } from './data';
@@ -110,7 +111,7 @@ function UslugiPage({openModal}) {
 										<p className={styles.description}>{item.description}</p>
 										<div className={styles.buttons}>
 											<button onClick={openModal} className={styles.letsGo}>Записаться</button>
-											<button className={styles.goToPrice}>Прайс</button>
+											<Link to='/price'><button className={styles.goToPrice}>Прайс</button></Link>
 										</div>
 									</div>
 								);

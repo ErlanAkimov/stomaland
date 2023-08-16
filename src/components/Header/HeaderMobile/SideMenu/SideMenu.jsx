@@ -15,10 +15,10 @@ function SideMenu({}) {
 
 	return (
 		<div className={`${styles.wrapper}`} style={{ right: menu, transition: '.2s ease-in-out' }}>
-			<Link to="/" onClick={HideMenu}>
+			<Link to="/">
 				<h1 className={styles.title}>
 					stoma<span>land</span>
-					<img onClick={HideMenu} src={close} alt="" />
+					<div className={styles.close} onClick={HideMenu}><img src={close} alt="" /></div>
 				</h1>
 			</Link>
 

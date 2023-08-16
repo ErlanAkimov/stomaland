@@ -45,11 +45,16 @@
         color: #2ca1ae;
     }
 
-    img {
-        width: 30px;
+    .close {
         position: absolute;
         right: 0;
+        width: 30px;
+        height: 30px;
+        img {
+            width: 30px;
+        }
     }
+
 }
 
 .work_time {
