@@ -76,3 +76,13 @@ form {
     margin: 0 auto 0;
     opacity: .6;
 }
+
+.close_icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    img {
+        width: 40px;
+    }
+}
