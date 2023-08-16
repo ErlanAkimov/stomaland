@@ -60,3 +60,36 @@ iframe {
 .message {
     margin-top: 30px;
 }
+
+@media screen and (max-width: 861px) {
+    .contact_item {
+        grid-template-columns: auto;
+        row-gap: 10px;
+    }
+
+    .item_title {
+        font-weight: 700;
+    }
+
+    .address {
+        grid-template-columns: auto;
+        row-gap: 40px;
+    }
+}
+
+
+@media screen and (max-width: 701px) {
+    .wrapper {
+        padding: 0 20px 80px;
+    }
+
+    iframe {
+        height: 200px;
+        margin-top: 70px;
+    }
+
+    .contact_title {
+        font-size: 24px;
+        font-weight: 700;
+    }
+}
