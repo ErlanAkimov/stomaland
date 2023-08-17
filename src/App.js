@@ -39,22 +39,20 @@ function App() {
 	}, []);
 
 	const [modal, setModal] = React.useState(false);
-
-	React.useEffect(() => {
-
-	}, [])
+    const [pick, setPick] = React.useState('');
+    const [doctor, setDoctor] = React.useState('');
 
 	return (
 		<Provider>
 			<BrowserRouter>
-				{modal ? <Modal closeModal={closeModal} /> : null}
+				{modal ? <Modal doctor={doctor} pick={pick} closeModal={closeModal} /> : null}
 				
 				{header}
 				{/* <SearchLine /> */}
 				<Routes>
 					<Route exact path="/" element={<Homepage />} />
-					<Route exact path="/doctors" element={<DoctorsPage />} />
-					<Route exact path="/doctors/:path" element={<DoctorPersonalPage />} />
+					<Route exact path="/doctors" element={<DoctorsPage  openModal={openModal} />} />
+					<Route exact path="/doctors/:path" element={<DoctorPersonalPage openModal={openModal} />} />
 					<Route exact path="/contacts" element={<ContactsPage />} />
 					<Route exact path="/job" element={<JobPage />} />
 					<Route path="/uslugi" element={<UslugiPage openModal={openModal} />} />
@@ -67,8 +65,12 @@ function App() {
 		</Provider>
 	);
 
-	function openModal() {
+	function openModal(title, doctor) {
 		setModal(true);
+		title && setPick(title)
+		doctor && setDoctor(doctor)
+
+		console.log(doctor)
 	}
 
 	function closeModal() {

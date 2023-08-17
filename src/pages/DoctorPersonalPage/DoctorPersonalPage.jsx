@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 
 import account_img from '../../assets/images/account.png';
 
-function DoctorPersonalPage() {
+function DoctorPersonalPage({openModal}) {
 	React.useEffect(() => {
 		window.scrollTo(0, 0);
 	}, [])
@@ -35,7 +35,7 @@ function DoctorPersonalPage() {
 						</div>
 					</div>
 
-					<button className={styles.btn}>Записаться</button>
+					<button className={styles.btn} onClick={() => {openModal(null, doctor.name)}}>Записаться</button>
 				</div>
 			</div>
 			<div className={styles.text_side}>

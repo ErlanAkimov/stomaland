@@ -87,7 +87,7 @@ function UslugiPage({openModal}) {
 						})}
 					</div>
 				) : (
-					console.log('')
+					null
 				)}
 
 				<div className={styles.content_block}>
@@ -111,7 +111,7 @@ function UslugiPage({openModal}) {
 										<img className={styles.img} src={item.img} alt="" />
 										<p className={styles.description}>{item.description}</p>
 										<div className={styles.buttons}>
-											<button onClick={openModal} className={styles.letsGo}>Записаться</button>
+											<button onClick={() => {openModal(item.title, null)}} className={styles.letsGo}>Записаться</button>
 											<Link to='/price'><button className={styles.goToPrice}>Прайс</button></Link>
 										</div>
 									</div>

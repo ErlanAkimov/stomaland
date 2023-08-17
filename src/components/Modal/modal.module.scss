@@ -86,3 +86,48 @@ form {
         width: 40px;
     }
 }
+
+.answer_block {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+
+    P {
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .modal_wrapper {
+        width: calc(100% - 40px);
+        padding: 40px 20px;
+    }
+
+    .title {
+        font-weight: 500;
+        font-size: 22px;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .close_icon {
+        top: 10px;
+        right: 10px;
+        img {
+            width: 30px;
+        }
+    }
+
+    form {
+        margin-top: 10px;
+    }
+    .btn {
+        margin-top: 0;
+    }
+    .policy {
+        width: 100%;
+        font-size: 12px;
+    }
+}

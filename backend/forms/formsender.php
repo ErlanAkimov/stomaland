@@ -3,6 +3,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'];
     $phone = $_POST['phone'];
     $message = $_POST['message'];
+    $picked = $_POST['picked'];
+    $doctor = $_POST['doctor'];
     
     // Здесь указываете адрес, на который нужно отправить почту
     $to = 'erlan_akimov_dev@mail.ru';
@@ -16,6 +18,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $message_body = "Имя: $name<br>";
     $message_body .= "Номер телефона: $phone<br>";
     $message_body .= "Сообщение: $message<br>";
+    if ($picked) {
+        $message_body .= "Выбранная услуга: $picked<br>";
+    }
+    if ($doctor) {
+        $message_body .= "Запись к доктору: $doctor<br>";
+    }
     
     if (mail($to, $subject, $message_body, $headers)) {
         echo 'Сообщение доставлено';
