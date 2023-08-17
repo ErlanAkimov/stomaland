@@ -40,10 +40,13 @@ function App() {
 
 	const [modal, setModal] = React.useState(false);
 
+	React.useEffect(() => {
+
+	}, [])
+
 	return (
 		<Provider>
 			<BrowserRouter>
-				
 				{modal ? <Modal closeModal={closeModal} /> : null}
 				
 				{header}

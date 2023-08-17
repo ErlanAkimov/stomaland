@@ -7,6 +7,10 @@ import { useParams } from 'react-router-dom';
 import account_img from '../../assets/images/account.png';
 
 function DoctorPersonalPage() {
+	React.useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [])
+	
 	const { path } = useParams();
 
 	const doctor = stuff.find((person) => person.path === path);

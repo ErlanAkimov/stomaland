@@ -15,7 +15,9 @@ import LicenseBar from './LicenseBar/LicenseBar';
 import { benefits, servicesCards } from '../../components/data';
 
 function Homepage() {
-
+	React.useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [])
 
 	return (
 		<div>

@@ -2,8 +2,13 @@ import styles from './reviews.module.scss';
 import flamp from '../../assets/images/logo-flamp.png';
 import google from '../../assets/images/google.png';
 import twogis from '../../assets/images/2gis.png';
+import React from 'react';
 
 function ReviewsPage() {
+	React.useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [])
+
 	const five = ['', '', '', '', ''];
 	const four = ['', '', '', ''];
 

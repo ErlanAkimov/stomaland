@@ -2,7 +2,10 @@ import React from 'react';
 import styles from './job.module.scss';
 function JobPage() {
 	const vacancies = [/* { position: 'Врач-стоматолог-хирург', time: 'Частичная занятость (2-3 дня в неделю)'} */];
-
+	React.useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [])
+	
 	return (
 		<div className={styles.wrapper}>
 			<h1 className={styles.h1}>Вакансии</h1>

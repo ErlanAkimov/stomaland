@@ -47,6 +47,7 @@ function UslugiPage({openModal}) {
 
 	React.useEffect(() => {
 		Shuffle(all);
+		window.scrollTo(0, 0);
 	}, []);
 
 	function Search() {

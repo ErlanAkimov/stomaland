@@ -1,6 +1,10 @@
 import styles from './ContactsPage.module.scss';
+import React from 'react';
 
 function ContactsPage() {
+	React.useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [])
 	const contacts_list_time = [
 		{ item_title: 'Понедельник — Пятница', item_text: 'с 8 : 00 до 21 : 00' },
 		{ item_title: 'Суббота', item_text: 'с 9 : 00 до 15 : 00' },

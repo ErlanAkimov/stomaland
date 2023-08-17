@@ -5,6 +5,10 @@ import { stuff } from '../../components/data';
 import { Link } from 'react-router-dom';
 
 function DoctorsPage() {
+	React.useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [])
+	
 	return (
 		<>
 			<div className={styles.wrapper}>
