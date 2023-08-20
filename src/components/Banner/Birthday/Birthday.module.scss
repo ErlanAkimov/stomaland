@@ -1,5 +1,5 @@
 .wrapper {
-    margin-top: 110px;
+    margin-top: 120px;
     max-width: 1340px;
     margin-inline: auto;
     height: 400px;
@@ -19,7 +19,7 @@
     font-size: 42px;
     margin-left: 6%;
     margin-top: 50px;
-    color: white;
+    color: rgb(231, 26, 26);
     z-index: 10;
     position: relative;
 }
@@ -29,23 +29,13 @@
     max-width: 50%;
     font-size: 18px;
     margin-top: 30px;
-    color: white;
+    color: rgb(80, 80, 80);
     position: relative;
     z-index: 10;
 
     b {
-        color: white;
+        color: rgb(0, 0, 0);
     }
-}
-
-.overlay {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,.25);
 }
 
 @media screen and (max-width: 1439px) {
@@ -60,21 +50,20 @@
 @media screen and (max-width: 575px) {
     .wrapper {
         padding: 10px 20px;
-        height: 250px;
+        height: 300px;
     }
     .main_image {
         left: initial;
+        height: 300px;
         top: 0;
         right: 0;
         transform: translate(0,0);
-        opacity: .8;
     }
 
     .main_title {
         font-size: 26px;
         width: 70%;
         margin-top: 10px;
-        color: white;
         position: relative;
         z-index: 10;
         margin-left: 0;
@@ -82,16 +71,13 @@
 
     .text {
         position: relative;
+        background-color: rgba(255, 255, 255, 0.4);
         z-index: 10;
-        color: white;
         margin-left: 0;
         margin-top: 10px;
         font-size: 14px;
+        font-weight: 600;
         max-width: 70%;
         width: 70%;
-
-        b {
-            color: white;
-        }
     }
 }

@@ -14,14 +14,14 @@ import LicenseBar from './LicenseBar/LicenseBar';
 
 import { benefits, servicesCards } from '../../components/data';
 
-function Homepage() {
+function Homepage({openModal}) {
 	React.useEffect(() => {
 		window.scrollTo(0, 0);
 	}, [])
 
 	return (
 		<div>
-			<Banner />
+			<Banner openModal={openModal} />
             <ServicesCards props={servicesCards} />
 
 			<div className="all-services-btn">

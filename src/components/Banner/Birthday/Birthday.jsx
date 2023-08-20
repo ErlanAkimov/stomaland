@@ -14,12 +14,12 @@ function Birthday() {
 
     return(
         <div className={styles.wrapper}>
-            <div className={styles.overlay}></div>
+            {/* <div className={styles.overlay}></div> */}
             <img className={styles.main_image} src={image} alt="" />
             <h1 className={styles.main_title}>Именинникам - скидки на лечение</h1>
             <p className={styles.text}>
                 Чтобы еще больше украсить Ваш личный праздник, мы решили сделать акцию в честь Дня Рождения!
-                В течение 7 дней <b>до</b> и <b>после</b> дня рождения. 
+                В течение <b>7 дней до и после</b> дня рождения. 
             </p>
         </div>
     )

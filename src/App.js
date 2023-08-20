@@ -50,7 +50,7 @@ function App() {
 				{header}
 				{/* <SearchLine /> */}
 				<Routes>
-					<Route exact path="/" element={<Homepage />} />
+					<Route exact path="/" element={<Homepage openModal={openModal} />} />
 					<Route exact path="/doctors" element={<DoctorsPage  openModal={openModal} />} />
 					<Route exact path="/doctors/:path" element={<DoctorPersonalPage openModal={openModal} />} />
 					<Route exact path="/contacts" element={<ContactsPage />} />
@@ -71,6 +71,7 @@ function App() {
 		doctor && setDoctor(doctor)
 
 		console.log(doctor)
+		console.log(title)
 	}
 
 	function closeModal() {

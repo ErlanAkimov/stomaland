@@ -1,0 +1,26 @@
+.dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 7px;
+}
+
+.dot {
+    background-color: white;
+    width: 13px;
+    height: 13px;
+    border: 1.2px solid #356a70;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+}
+
+.active_dot {
+    background-color: #356a70;
+}
