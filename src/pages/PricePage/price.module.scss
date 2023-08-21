@@ -14,24 +14,6 @@
 	}
 }
 
-.maintenance {
-	font-size: 33px;
-	font-weight: 700;
-	margin-top: 20px;
-}
-
-.message {
-	margin-top: 20px;
-	font-size: 22px;
-	max-width: 1000px;
-	line-height: 28px;
-	span {
-		color: blue;
-	}
-}
-
-// main
-
 .content {
 	margin-top: 20px;
 }
@@ -46,7 +28,7 @@
 
 	&_h1 {
 		font-size: 22px;
-		font-weight: 500;
+		font-weight: 600;
 	}
 }
 
@@ -60,12 +42,55 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	font-weight: 500;
 
 	&:nth-child(2n) {
 		background-color: #f1f1f1;
+	}
+
+	h4 {
+		font-weight: 500;
+		font-size: 18px;
+	}
+	
+	span {
+		min-width: fit-content;
+		font-weight: 600;
 	}
 }
 
 .table {
 	overflow: hidden;
+}
+
+
+@media screen and (max-width: 701px) {
+	.wrapper {
+		padding: 20px;
+
+		.title {
+			font-size: 32px;
+		}
+	}
+
+	.content {
+		margin-top: 10px;
+	}
+
+	.block_title {
+		&_h1 {
+			font-size: 16px;
+		}
+	}
+
+	.table_item {
+		h4 {
+			font-size: 14px;
+			// max-width: 80%;
+		}
+	}
+
+	svg {
+		width: 15px;
+	}
 }
