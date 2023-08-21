@@ -9,6 +9,7 @@ import ServicesCards from './ServicesCards/ServicesCards';
 import DoctorsBanner from '../../components/DoctorsBanner/DoctorsBanner';
 import WhyWe from './WhyWe/WhyWe';
 import LicenseBar from './LicenseBar/LicenseBar';
+import Reviews from './Reviews/Reviews.jsx'
 
 
 
@@ -32,6 +33,7 @@ function Homepage({openModal}) {
 			<DoctorsBanner />
 			<LicenseBar />
             <WhyWe props={benefits} />
+			<Reviews />
 		</div>
 	);
 }
