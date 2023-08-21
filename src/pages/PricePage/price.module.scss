@@ -61,10 +61,11 @@
 	align-items: center;
 	justify-content: space-between;
 
-    &:nth-child(2n) {
-        background-color: #f1f1f1;
-    }
+	&:nth-child(2n) {
+		background-color: #f1f1f1;
+	}
 }
 
-.item_title {
+.table {
+	overflow: hidden;
 }
