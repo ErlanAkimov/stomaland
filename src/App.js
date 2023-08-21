@@ -14,6 +14,7 @@ import ContactsPage from './pages/ContactsPage/ContactsPage';
 import JobPage from './pages/JobPage/JobPage'
 import ReviewsPage from './pages/ReviewsPage/ReviewsPage';
 import PricePage from './pages/PricePage/PricePage';
+import Page404 from './pages/Page404/Page404';
 // import SearchLine from './components/SearchLine/SearchLine.jsx';
 
 
@@ -58,6 +59,7 @@ function App() {
 					<Route path="/uslugi" element={<UslugiPage openModal={openModal} />} />
 					<Route path="/reviews" element={<ReviewsPage />} />
 					<Route path="/price" element={<PricePage />} />
+					<Route path='*' element={<Page404 />} />
 
 				</Routes>
 				<Footer />
