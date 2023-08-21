@@ -4,15 +4,17 @@ import maintenance from '../../assets/images/maintenance.png';
 import { data } from './price-data.js';
 
 function PricePage() {
-	const [chevronAngle, setChevronAngle] = React.useState('180deg');
 	const [render, setRender] = React.useState(data);
 
 	const [maxHeight, setMaxHeight] = React.useState(Array(data.length).fill('0px'));
 	const [openStates, setOpenStates] = React.useState(Array(data.length).fill(false));
+
+	// const [rotateState, setRotateState] = React.useState(Array(data.length).fill(false));
+	const [rotate, setRotate] = React.useState(Array(data.length).fill('rotate(0deg)'));
+
 	const refItem = React.useRef(data.map(() => React.createRef()));
 
 	const toggleElement = (index) => {
-		chevronAngle === '180deg' ? setChevronAngle('0deg') : setChevronAngle('180deg');
 		setOpenStates((prevOpenStates) => {
 			const newOpenStates = [...prevOpenStates];
 			newOpenStates[index] = !newOpenStates[index];
@@ -21,10 +23,24 @@ function PricePage() {
 
 		setMaxHeight((prevMaxHeight) => {
 			const currentRefItem = refItem.current[index].current.clientHeight;
-			console.log(currentRefItem);
 			const prev = [...prevMaxHeight];
 			prev[index] == '0px' ? (prev[index] = currentRefItem) : (prev[index] = '0px');
 			return prev;
+		});
+
+		// setRotateState((prevState) => {
+		// 	const newState = [...prevState];
+		// 	newState[index] = !newState[index];
+		// 	return [newState];
+		// });
+
+		setRotate((prevValue) => {
+			const newValue = [...prevValue];
+			newValue[index] == 'rotate(0deg)'
+				? newValue[index] = 'rotate(-180deg)'
+				: newValue[index] = 'rotate(0deg)';
+
+			return newValue;
 		});
 	};
 
@@ -48,10 +64,13 @@ function PricePage() {
 							<h1 className={styles.block_title_h1}>{item.section}</h1>
 
 							<svg
-								style={{ rotate: chevronAngle, transition: '.2s ease-in-out' }}
 								height="20px"
 								width="20px"
 								viewBox="0 0 185.344 185.344"
+								style={{
+									transition: '.3s ease-in-out',
+									transform: openStates[index] ? rotate[index] : 'rotate(0deg)',
+								}}
 							>
 								<path
 									style={{ fill: '#010002' }}
@@ -68,7 +87,10 @@ function PricePage() {
 								transition: '.3s ease-in-out',
 							}}
 						>
-							<div ref={refItem.current[index]} style={{transition: '.3s ease-in-out'}}>
+							<div
+								ref={refItem.current[index]}
+								style={{ transition: '.3s ease-in-out' }}
+							>
 								{/* Должен открываться этот блок, для каждого элемента в отдельности */}
 								{item.services.map((service, index) => {
 									return (
