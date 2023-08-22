@@ -1,7 +1,7 @@
 .wrapper {
-	max-width: 1440px;
-	margin-inline: auto;
-	padding-inline: 50px;
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: 50px;
     margin-top: 130px;
     display: flex;
     column-gap: 50px;
@@ -21,6 +21,7 @@
         width: 100%;
         padding: 10px 0;
         height: fit-content;
+
         .department {
             font-size: 14px;
             text-transform: uppercase;
@@ -31,6 +32,7 @@
             margin-top: 10px;
             color: rgb(53, 53, 53);
         }
+
         .spec {
             @extend .department;
             border-bottom: 1px solid #2CA1AE;
@@ -42,7 +44,7 @@
             border-radius: 60px;
             margin-top: 10px;
             font-size: 16px;
-            
+
         }
     }
 }
@@ -120,10 +122,53 @@
     color: white;
     background-color: #2CA1AE;
     border-radius: 10px;
-    transition: .1s ease-in-out ;
+    transition: .1s ease-in-out;
+
     &:hover {
         background-color: #268691;
     }
+}
+
+
+.arrowContainer {
+    display: inline-block;
+    vertical-align: middle;
+    height: 28px;
+}
+
+.arrow {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+
+    img {
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+.rotate {
+    transform: rotate(180deg);
+
+    img {
+        transform: rotate(180deg);
+    }
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* Apply animation class when the education block is shown */
+.show {
+    animation: fadeIn 0.3s ease-in-out forwards;
 }
 
 @media screen and (max-width: 865px) {
@@ -146,7 +191,7 @@
     .calendar_days {
         font-size: 15px;
     }
-    
+
     .position {
         margin-top: 0;
     }
@@ -170,10 +215,12 @@
         margin-top: 20px;
     }
 }
+
 @media screen and (max-width: 426px) {
     .wrapper {
         padding-inline: 20px;
     }
+
     .img_side {
         max-width: 100%;
         width: 100%;

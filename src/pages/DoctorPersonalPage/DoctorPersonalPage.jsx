@@ -1,19 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './DoctorPersonalPage.module.scss';
 import { stuff } from '../../components/data';
 
 import { useParams } from 'react-router-dom';
 
-import account_img from '../../assets/images/account.png';
+import account_img from '../../assets/images/control-key.svg';
 
-function DoctorPersonalPage({openModal}) {
+function DoctorPersonalPage({ openModal }) {
 	React.useEffect(() => {
 		window.scrollTo(0, 0);
 	}, [])
-	
+
 	const { path } = useParams();
 
 	const doctor = stuff.find((person) => person.path === path);
+
+	//Стрелка для образования
+	const [showEducation, setShowEducation] = useState(true);
+	const [educationAnimation, setEducationAnimation] = useState(true);
+
+	const toggleEducation = () => {
+		setEducationAnimation(true);
+		setTimeout(() => {
+			setShowEducation(!showEducation);
+			setEducationAnimation(true);
+		}, 300);
+	};
+
+	const arrowClass = showEducation ? `${styles.arrow} ${styles.rotate}` : styles.arrow;
+
+	//стрелка для курсов
+	const [showCurs, setShowCurs] = useState(true);
+	const [cursAnimation, setCursAnimation] = useState(false);
+
+	const toggleCurs= () => {
+		setCursAnimation(true);
+		setTimeout(() => {
+			setShowCurs(!showCurs);
+			setCursAnimation(true);
+		}, 300);
+	};
+
+	const arrowClassCurs = showCurs ? `${styles.arrow} ${styles.rotate}` : styles.arrow;
+
+
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.img_side}>
@@ -35,7 +65,7 @@ function DoctorPersonalPage({openModal}) {
 						</div>
 					</div>
 
-					<button className={styles.btn} onClick={() => {openModal(null, doctor.name)}}>Записаться</button>
+					<button className={styles.btn} onClick={() => { openModal(null, doctor.name) }}>Записаться</button>
 				</div>
 			</div>
 			<div className={styles.text_side}>
@@ -46,26 +76,49 @@ function DoctorPersonalPage({openModal}) {
 					<p className={styles.experience}>
 						Стаж профессиональной деятельности: {doctor.experience}
 					</p>
-					<h4 className={styles.edu_title}>Образование</h4>
-					<div className={styles.edu_items}>
-						{doctor.education_years.map((item, index) => {
-							return (
-								<div key={index} className={styles.edu_item}>
-									<h3>{item}</h3>
-									<p className={styles.edu_text}>{doctor.education[index]}</p>
-								</div>
-							);
-						})}
-					</div>
-
+					<h4 className={styles.edu_title}>
+						Образование
+						<span className={styles.arrowContainer} onClick={toggleEducation}>
+							<img
+								className={arrowClass}
+								src={account_img}
+								alt="Стрелочка"
+								width={24}
+								height={24}
+							/>
+						</span>
+					</h4>
+					{showEducation && (
+						<div className={`${styles.edu_items} ${educationAnimation ? styles.show : ''}`}>
+							{doctor.education_years.map((item, index) => {
+								return (
+									<div key={index} className={styles.edu_item}>
+										<h3>{item}</h3>
+										<p className={styles.edu_text}>{doctor.education[index]}</p>
+									</div>
+								);
+							})}
+						</div>
+					)}
 					{doctor.courses && (
 						<>
-							<h4 className={styles.edu_title}>Курсы повышения квалификации:</h4>
-							<ul className={styles.courses_list}>
+							<h4 className={styles.edu_title}>
+								Курсы повышения квалификации:
+								<span className={styles.arrowContainer} onClick={toggleCurs}>
+									<img
+										className={arrowClassCurs}
+										src={account_img}
+										alt="Стрелочка"
+										width={24}
+										height={24}
+									/>
+								</span>
+							</h4>
+							{showCurs && (<ul className={`${styles.courses_list} ${cursAnimation ? styles.show : ''}`}>
 								{doctor.courses.map((course, index) => {
 									return <li key={index} className={styles.courses_item}>{course}</li>;
 								})}
-							</ul>
+							</ul>)}
 						</>
 					)}
 				</div>
