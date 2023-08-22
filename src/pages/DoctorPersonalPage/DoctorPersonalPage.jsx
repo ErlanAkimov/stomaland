@@ -30,7 +30,7 @@ function DoctorPersonalPage({ openModal }) {
 	const arrowClass = showEducation ? `${styles.arrow} ${styles.rotate}` : styles.arrow;
 
 	//стрелка для курсов
-	const [showCurs, setShowCurs] = useState(true);
+	const [showCurs, setShowCurs] = useState(false);
 	const [cursAnimation, setCursAnimation] = useState(false);
 
 	const toggleCurs= () => {
