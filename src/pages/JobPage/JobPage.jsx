@@ -1,7 +1,9 @@
 import React from 'react';
 import styles from './job.module.scss';
+import Vacancy from './Vacancy/Vacancy.jsx';
+
 function JobPage() {
-	const vacancies = [/* { position: 'Врач-стоматолог-хирург', time: 'Частичная занятость (2-3 дня в неделю)'} */];
+	const vacancies = [<Vacancy />];
 	React.useEffect(() => {
 		window.scrollTo(0, 0);
 	}, [])
@@ -17,27 +19,9 @@ function JobPage() {
 				</div>
 			) : (
 				vacancies.map((item, index) => {
-					return <div key={index}>{item.position}</div>;
+					return item
 				})
 			)}
-
-			<div className={styles.offer}>
-				<div className={styles.offer_item}>
-					<div className={styles.item_title}>Основные требования:</div>
-					<ul className={styles.list}>
-						<li>Опыт работы от 3-ех лет</li>
-						<li>Профильное медицинское образование</li>
-					</ul>
-				</div>
-				<div className={styles.offer_item}>
-					<div className={styles.item_title}>Условия:</div>
-					<ul className={styles.list}>
-						<li>Официальное трудоустройство</li>
-						<li>Полный соц. пакет</li>
-						<li>Конкурентная заработная плата</li>
-					</ul>
-				</div>
-			</div>
 		</div>
 	);
 }
