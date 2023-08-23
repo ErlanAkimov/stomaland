@@ -40,6 +40,7 @@ function App() {
 	}, []);
 
 	const [modal, setModal] = React.useState(false);
+	const [vacancyModal, setVacancyModal] = React.useState(false)
     const [pick, setPick] = React.useState('');
     const [doctor, setDoctor] = React.useState('');
 
@@ -71,9 +72,6 @@ function App() {
 		setModal(true);
 		title && setPick(title)
 		doctor && setDoctor(doctor)
-
-		console.log(doctor)
-		console.log(title)
 	}
 
 	function closeModal() {
