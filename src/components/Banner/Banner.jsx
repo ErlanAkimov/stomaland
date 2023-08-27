@@ -5,7 +5,7 @@ import FreeVisit from './FreeVisit/FreeVisit';
 import React from 'react';
 
 function Banner({ openModal }) {
-	const banners = [<Birthday />, <FreeVisit openModal={openModal} />];
+	const banners = [<FreeVisit openModal={openModal} />, <Birthday />];
 	const [active, setActive] = React.useState(0);
 	const [render, setRender] = React.useState(banners[active]);
 

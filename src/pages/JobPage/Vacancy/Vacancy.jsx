@@ -34,7 +34,7 @@ function Vacancy({ vacan_data }) {
 			</div>
 
 			<div className={styles.skills}>
-				<div style={{ display: 'flex', columnGap: '15px' }}>
+				<div className={styles.navyki}>
 					{vacan_data.skills.map((item, index) => {
 						return <p key={index}>{item}</p>;
 					})}
