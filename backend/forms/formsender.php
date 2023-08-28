@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $doctor = $_POST['doctor'];
     
     // Здесь указываете адрес, на который нужно отправить почту
-    $to = 'erlan_akimov_dev@mail.ru';
+    $to = 'stomaland@inbox.ru';
     $subject = 'Новое сообщение с сайта';
     
     $headers = "From: $phone\r\n";
