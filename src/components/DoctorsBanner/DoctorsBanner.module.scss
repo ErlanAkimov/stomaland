@@ -48,9 +48,15 @@
 	width: 300px;
 }
 
+@media screen and (max-width: 1439px) {
+	.outer_wrapper {
+		padding-inline: 30px;
+	}
+}
+
 @media screen and (max-width: 950px) {
 	.outer_wrapper {
-		margin-top: 40px;
+		padding-inline: 30px;
 	}
 	.doctors_img {
 		right: 30px;
@@ -62,10 +68,10 @@
 	}
 }
 
-@media screen and (max-width: 675px) {
+@media screen and (max-width: 575px) {
 	.outer_wrapper {
 		padding: 0 20px;
-		margin-top: 30px;
+		margin-top: 0;
 	}
 
 	.doctors_img {
