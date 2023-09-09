@@ -25,11 +25,11 @@ function Homepage({openModal}) {
 			<Banner openModal={openModal} />
             <ServicesCards props={servicesCards} />
 
-			<div className="all-services-btn">
+			{/* <div className="all-services-btn">
 				<Link to="/services">
 					<button className="btn-hover">Все услуги</button>
 				</Link>
-			</div>
+			</div> */}
 			<DoctorsBanner />
 			<LicenseBar />
             <WhyWe props={benefits} />
