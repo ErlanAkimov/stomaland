@@ -97,29 +97,35 @@
 @media screen and (max-width: 575px) {
 	.content {
 		padding: 30px 20px;
+
+		.card {
+			padding: 20px 30px;
+			height: fit-content;
+			border-radius: 0;
+	
+			&__title {
+				font-size: 22px;
+			}
+	
+			&__text {
+				width: 100%;
+				font-size: 13px;
+				margin-top: 5px;
+				hyphens: auto;
+				margin-top: 20px;
+				height: fit-content;
+			}
+	
+			&__img {
+				display: none;
+			}
+
+			&__btn {
+				width: 100%;
+				margin-top: 30px;
+				border-radius: 0;
+			}
+		}
 	}
-	.card {
-		width: 100%;
-		padding: 20px 10px;
-		border-radius: 15px;
-		height: fit-content;
 
-		&__title {
-			font-size: 15px;
-		}
-
-		&__text {
-			width: 100%;
-			font-size: 13px;
-			margin-top: 5px;
-			hyphens: auto;
-		}
-		&__btn {
-
-		}
-
-		&__img {
-			display: none;
-		}
-	}
 }
