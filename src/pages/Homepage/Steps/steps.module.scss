@@ -35,6 +35,7 @@
 }
 
 .main_form {
+    position: relative;
     margin-top: 50px;
     max-width: 570px;
     grid-row: 2/3;
@@ -93,6 +94,25 @@
         margin-left: 20px;
         margin-top: 10px;
         color: #7a7a7a;
+    }
+}
+
+.good_message {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    row-gap: 30px;
+    transition: .2s ease-in-out;
+
+    img {
+        max-width: 100px;
     }
 }
 

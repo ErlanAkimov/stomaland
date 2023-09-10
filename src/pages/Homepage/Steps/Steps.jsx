@@ -1,4 +1,6 @@
 import styles from './steps.module.scss';
+import React from 'react';
+import axios from 'axios';
 
 //import images for steps
 import icon1 from '../../../assets/images/icons/toothBrushIcon.png';
@@ -6,6 +8,7 @@ import icon2 from '../../../assets/images/icons/appleIcon.png';
 import icon3 from '../../../assets/images/icons/chairIcon.png';
 import icon4 from '../../../assets/images/icons/alcoholIcon.png';
 import icon5 from '../../../assets/images/icons/plusIcon.png';
+import confirmed_icon from '../../../assets/images/confirmed.png';
 
 function Steps() {
 	const steps_data = [
@@ -35,6 +38,23 @@ function Steps() {
 			image: icon5,
 		},
 	];
+
+	const [nameValue, setNameValue] = React.useState();
+	const [phoneValue, setPhoneValue] = React.useState();
+
+	const [opacity, setOpacity] = React.useState('0');
+	const [visibility, setVisibility] = React.useState('hidden');
+
+
+	function handleValueChanger(e) {
+		console.log(e.target.type)
+		if (e.target.type === 'text') {
+			setNameValue(e.target.value);
+		}
+		if (e.target.type === 'tel') {
+			setPhoneValue(e.target.value);
+		}
+	}
 
 	return (
 		<div className={styles.wrapper}>
@@ -76,16 +96,50 @@ function Steps() {
 					})}
 				</div>
 
-				<form className={styles.main_form}>
-					<h2 className={styles.title2}>Запишитесь на бесплатный осмотр</h2>
-					<input type="text" placeholder="Ваше имя" required />
-					<input type="tel" placeholder="Номер телефона" required />
+				<form className={styles.main_form} onSubmit={FormSender}>
 
-					<button className={styles.btn}>Отправить заявку</button>
+					<div className={styles.good_message} style = {{
+						opacity: opacity,
+						visibility: visibility,
+					}}>
+						<img src={confirmed_icon} alt="" />
+						Приняли вашу заявку, скоро с вами свяжемся для уточнения деталей...
+					</div>
+					<h2 className={styles.title2}>Запишитесь на бесплатный осмотр</h2>
+					<input name='name' value={nameValue} onChange={handleValueChanger} type="text" placeholder="Ваше имя" required />
+					<input name='phone' value={phoneValue} onChange={handleValueChanger} type="tel" placeholder="Номер телефона" required />
+
+					<button className={styles.btn} >Отправить заявку</button>
 				</form>
 			</div>
 		</div>
 	);
+
+	function FormSender(e) {
+		e.preventDefault();
+
+		const data = new FormData();
+		data.append('name', nameValue);
+		data.append('phone', phoneValue);
+		
+		axios
+            .post('https://stomaland.ru/backend/forms/formsender.php', data)
+            .then((response) => {
+				if (response.data === 'Сообщение доставлено') {
+					setNameValue('');
+					setPhoneValue('');
+					setOpacity('1');
+					setVisibility('initial');
+
+					setTimeout(() => {
+						setOpacity('0');
+						setVisibility('hidden');
+					}, 2400)
+
+					console.log(response.data)
+				}
+		    });
+	}
 }
 
 export default Steps;
