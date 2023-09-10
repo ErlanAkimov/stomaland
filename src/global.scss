@@ -18,6 +18,16 @@
 }
 
 
+body::-webkit-scrollbar {
+  width: 8px;
+  background-color: #f0f0f0;
+
+  &-thumb {
+    background-color: #0a4a52;
+    border-radius: 5px;
+  }
+}
+
 
 // * {
 //   outline: auto;

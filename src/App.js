@@ -61,7 +61,6 @@ function App() {
 					<Route path="/reviews" element={<ReviewsPage />} />
 					<Route path="/price" element={<PricePage />} />
 					<Route path='*' element={<Page404 />} />
-
 				</Routes>
 				<Footer />
 			</BrowserRouter>

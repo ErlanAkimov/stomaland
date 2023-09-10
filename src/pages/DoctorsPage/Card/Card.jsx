@@ -13,7 +13,8 @@ function Card({ props }) {
 					<p className={styles.name}>{props.name}</p>
 					<p className={styles.specialization}>{props.specialization}</p>
 					<p className={styles.title_tier3}>Опыт врачебной деятельности: </p>
-					<p className={styles.experience}>{props.experience}</p>
+					<p className={styles.experience}>{/* {props.experience} */}
+					</p>
 				</div>
 			</div>
 

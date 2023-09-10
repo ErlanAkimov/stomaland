@@ -9,6 +9,7 @@ import ServicesCards from './ServicesCards/ServicesCards';
 import DoctorsBanner from '../../components/DoctorsBanner/DoctorsBanner';
 import WhyWe from './WhyWe/WhyWe';
 import Reviews from './Reviews/Reviews.jsx'
+import Steps from './Steps/Steps'
 
 
 
@@ -30,6 +31,7 @@ function Homepage({openModal}) {
 				</Link>
 			</div> */}
 			<DoctorsBanner />
+			<Steps />
             <WhyWe props={benefits} />
 			<Reviews />
 		</div>

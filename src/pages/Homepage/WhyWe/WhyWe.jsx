@@ -24,7 +24,7 @@ function WhyWe({ props }) {
 
   return (
     <div>
-      <h1 className={styles.main_title}>Почему мы?</h1>
+      <h1 className={styles.main_title}>Наши преимущества</h1>
 
       <div className={styles.wrapper}>
         {props.map((item, index) => {
@@ -32,7 +32,7 @@ function WhyWe({ props }) {
             <div key={item.id} className={styles.flex_wrapper}>
               <div onClick={() => toggleElement(index)} className={styles.show_side}>
                 <h2 className={styles.title}>{item.title}</h2>
-				<img src={close} alt="" style={{transform: openStates[index] ? 'translateY(-50%) rotate(0)' : 'translateY(-50%) rotate(45deg)'}} />
+				        <img src={close} alt="" style={{transform: openStates[index] ? 'translateY(-50%) rotate(0)' : 'translateY(-50%) rotate(45deg)'}} />
               </div>
 
               <div className={styles.close_side} style={{ maxHeight: openStates[index] ? current_height[index] + 'px' : '0'}}>
