@@ -5,6 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $message = $_POST['message'];
     $picked = $_POST['picked'];
     $doctor = $_POST['doctor'];
+
     
     // Здесь указываете адрес, на который нужно отправить почту
     $to = 'stomaland@inbox.ru, erlan_akimov_dev@mail.ru';
@@ -17,7 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     $message_body = "Имя: $name<br>";
     $message_body .= "Номер телефона: $phone<br>";
-    $message_body .= "Сообщение: $message<br>";
+    if ($message) {
+        $message_body .= "Сообщение: $message<br>";
+    }
     if ($picked) {
         $message_body .= "Выбранная услуга: $picked<br>";
     }
