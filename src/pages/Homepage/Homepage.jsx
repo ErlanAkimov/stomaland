@@ -10,6 +10,7 @@ import DoctorsBanner from '../../components/DoctorsBanner/DoctorsBanner';
 import WhyWe from './WhyWe/WhyWe';
 import Reviews from './Reviews/Reviews.jsx'
 import Steps from './Steps/Steps'
+import FAQ from './FAQ/FAQ'
 
 
 
@@ -32,6 +33,7 @@ function Homepage({openModal}) {
 			</div> */}
 			<DoctorsBanner />
 			<Steps />
+			<FAQ />
             <WhyWe props={benefits} />
 			<Reviews />
 		</div>

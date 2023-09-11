@@ -1,0 +1,176 @@
+.wrapper_outer {
+    width: 100%;
+    // transition: .2s ease-in-out;
+    background-color: #232325;
+    border-radius: 50px 50px 0 0;
+    margin-top: -50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.for_mob {display: none;}
+
+.wrapper {
+    max-width: 1440px;
+    padding-inline: 50px;
+    margin-inline: auto;
+    display: flex;
+}
+
+.wrapper_inner {
+    width: 100%;
+}
+
+.name {
+    font-size: 12px;
+    color: rgba(255, 255,255,.5);
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.title {
+    color: #fff;
+    font-size: 28;
+    font-weight: 600;
+    padding-left: 275px;
+    text-transform: uppercase;
+    max-width: 865px;
+    white-space: nowrap;
+}
+
+.description {
+    color: rgba(255, 255,255,.5);
+    font-size: 16px;
+    font-weight: 500;
+    max-width: 650px;
+    margin-left: 275px;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+.item {
+    border-bottom: 1px solid #c0c0c0;
+    width: 100%;
+    padding-left: 275px;
+    cursor: pointer;
+    overflow: hidden;
+
+    .item_top_side {
+        display: flex;
+        align-items: center;
+        height: 90px;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+.title2 {
+    font-size: 22px;
+    color: #fff;
+    position: relative;
+
+    .redDot {
+        position: absolute;
+        top: 8px;
+        background-color: red;
+        right: -30px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50px;
+    }
+}
+
+.text {
+    color: #c0c0c0;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 1439px) {
+    .wrapper {
+        padding-inline: 30px;
+    }
+
+    .title {
+        padding-left: 100px;
+    }
+
+    .description {
+        margin-left: 100px;
+    }
+
+    .item {
+        padding-left: 100px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .wrapper {
+        padding-inline: 30px;
+    }
+
+    .title {
+        font-size: 22px;
+        padding-left: 50px;
+    }
+
+    .description {
+        font-size: 14px;
+        margin-bottom: 10px;
+        margin-left: 50px;
+    }
+
+    .item {
+        padding-left: 50px;
+    }
+
+    .title2 {
+        font-size: 16px;
+        .redDot {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 968px) {
+    .for_mob {display: block;}
+    .description {padding-right: 50px;}
+}
+
+@media screen and (max-width: 701px) {
+    .wrapper_outer {
+        border-radius: 30px 30px 0 0;
+        padding-top: 50px;
+    }
+    .wrapper {
+        display: block;
+        padding-inline: 20px;
+
+        svg {
+            min-width: 50px;
+        }
+    }
+
+    .for_mob {display: block;}
+
+    .title {
+        font-size: 18px;
+        padding-left: 0;
+        margin-top: 10px;
+    }
+
+    .description {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .item {
+        padding-left: 0;
+    }
+    .title2 {
+        font-size: 14px;
+
+    }
+
+    .text {
+        font-size: 13px;
+    }
+    
+}
