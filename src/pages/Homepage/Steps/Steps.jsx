@@ -105,7 +105,7 @@ function Steps() {
 						<img src={confirmed_icon} alt="" />
 						Приняли вашу заявку, скоро с вами свяжемся для уточнения деталей...
 					</div>
-					<h2 className={styles.title2}>Запишитесь на бесплатный осмотр</h2>
+					<h2 className={styles.title2}>Запишитесь на <span>бесплатный</span> осмотр</h2>
 					<input name='name' value={nameValue} onChange={handleValueChanger} type="text" placeholder="Ваше имя" required />
 					<input name='phone' value={phoneValue} onChange={handleValueChanger} type="tel" placeholder="Номер телефона" required />
 
