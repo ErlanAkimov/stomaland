@@ -195,3 +195,10 @@
         }
     }
 }
+
+@media screen and (max-width: 575px) {
+    .wrapper {
+        margin-top: -60px;
+        padding-top: 80px;
+    }
+}

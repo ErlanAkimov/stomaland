@@ -30,9 +30,9 @@ function Homepage({openModal}) {
 					<button className="btn-hover">Все услуги</button>
 				</Link>
 			</div> */}
+			<FAQ />
 			<DoctorsBanner />
 			<Steps />
-			<FAQ />
 			<Reviews />
 		</div>
 	);
