@@ -109,7 +109,7 @@ function Steps() {
 					<input name='name' value={nameValue} onChange={handleValueChanger} type="text" placeholder="Ваше имя" required />
 					<input name='phone' value={phoneValue} onChange={handleValueChanger} type="tel" placeholder="Номер телефона" required />
 
-					<button className={styles.btn} >Отправить заявку</button>
+					<button className={styles.btn} onCLick={FormSender}>Отправить заявку</button>
 				</form>
 			</div>
 		</div>
