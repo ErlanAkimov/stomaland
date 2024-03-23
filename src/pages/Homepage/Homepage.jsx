@@ -1,9 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './Homepage.scss';
 
-
-// Components
+// COMPONENTS
 import Banner from '../../components/Banner/Banner';
 import ServicesCards from './ServicesCards/ServicesCards';
 import DoctorsBanner from '../../components/DoctorsBanner/DoctorsBanner';
@@ -11,25 +8,19 @@ import Reviews from './Reviews/Reviews.jsx'
 import Steps from './Steps/Steps'
 import FAQ from './FAQ/FAQ'
 
+import { servicesCards } from '../../components/data';
+import Header from '../../components/Header/Header.jsx';
 
-
-import { benefits, servicesCards } from '../../components/data';
-
-function Homepage({openModal}) {
+function Homepage() {
 	React.useEffect(() => {
 		window.scrollTo(0, 0);
 	}, [])
 
 	return (
 		<div>
-			<Banner openModal={openModal} />
+			<Header />
+			<Banner />
             <ServicesCards props={servicesCards} />
-
-			{/* <div className="all-services-btn">
-				<Link to="/services">
-					<button className="btn-hover">Все услуги</button>
-				</Link>
-			</div> */}
 			<FAQ />
 			<DoctorsBanner />
 			<Steps />

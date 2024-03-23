@@ -1,0 +1,214 @@
+.wrapper {
+    display: flex;
+    max-height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1000;
+}
+
+.land {
+    color: #2ca1ae;
+}
+
+.leftside {
+    box-sizing: border-box;
+    width: 70%;
+    padding: 80px 140px;
+    background-color: #fff;
+    box-shadow: 0 0 150px 50px rgba(0, 0, 0, 0.3);
+    height: 100vh;
+    position: relative;
+    z-index: 5;
+}
+
+.rightside {
+    width: 50%;
+    background-color: #f5f5f5;
+    position: relative;
+    z-index: 1;
+
+    .overlay {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(41, 41, 41, 0.3)
+    }
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.close {
+    cursor: pointer;
+    position: absolute;
+    left: -40px;
+    path {
+        fill: rgba(4, 30, 73);
+    }
+
+    &:hover {
+        path {
+            fill: black;
+        }
+    }
+}
+
+.title {
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex; 
+    align-items: center;
+    column-gap: 10px;
+    margin-bottom: 140px;
+    color: rgba(4, 30, 73, 0.7);
+}
+
+.stepTitle {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.form {
+    max-width: 600px;
+    margin-top: 50px;
+}
+
+.input {
+    padding: 10px 0;
+    font-size: 24px;
+    font-weight: 600;
+    border-bottom: 1px solid  rgba(80, 80, 80, 0.6);
+    margin-top: 10px;
+    color: blue;
+
+    &::placeholder {
+        color: rgba(80, 80, 80, 0.6);
+        font-weight: 500;
+    }
+
+    &:focus {
+        outline: 2px solid blue;
+    }
+
+    &Password {
+        width: 100%;
+        position: relative;
+
+        input {
+            width: 100%;
+        }
+
+        p {
+            font-size: 14px;
+            color: blue;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            height: calc(100% - 10px);
+            user-select: none;
+        }
+    }
+}
+
+.checkbox {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+    width: fit-content;
+    cursor: pointer;
+
+    p {
+        user-select: none;
+    }
+}
+
+.toggler {
+    background-color: #fdfdfd;
+    border: 1px solid #c0c0c0;
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    &__active {
+        @extend .toggler;
+        background-color: blue;
+        border: 1px solid blue;
+    }
+}
+
+.formBtn {
+    cursor: pointer;
+    width: 300px;
+    background-color: rgb(11, 87, 208);
+    padding: 16px;
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    border-radius: 4px;
+    margin-top: 50px;
+}
+
+.already {
+    margin-top: 20px;
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+
+    .inputDate {
+        // padding: 5px;
+        max-width: 160px;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+.text {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.text2 {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(124, 124, 124);
+    margin-top: 50px;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.prevBtn {
+    @extend .formBtn;
+    width: fit-content;
+    background-color: #fff;
+    color: blue;
+    font-size: 14px;
+    padding: 10px;
+
+    &:hover {
+        background-color: #f0f0f0;
+        
+    }
+}

@@ -3,6 +3,8 @@ import styles from './doctorspage.module.scss';
 import Card from './Card/Card.jsx';
 import { stuff } from '../../components/data';
 import { Link } from 'react-router-dom';
+import Header from '../../components/Header/Header.jsx';
+import Footer from '../../components/Footer/Footer.jsx';
 
 function DoctorsPage() {
 	React.useEffect(() => {

@@ -4,10 +4,24 @@
 	padding: 50px 50px 80px;
 	display: flex;
 	justify-content: space-between;
+	
 	* {
 		color: white;
 		font-weight: 500;
 	}
+}
+
+.ooo {
+	font-size: 16px;
+	color: rgb(221, 221, 221);
+}
+
+.mainWrapper {
+	width: 100%;
+	// position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: #2CA1AE;
 }
 
 .l_side {
@@ -89,10 +103,21 @@
 
 .logo_disclamer {
 	position: absolute;
-	bottom: -50px;
+	bottom: -70px;
 	font-weight: 400;
 	text-align: center;
 	width: 200%;
+}
+
+.ooo {
+	white-space: nowrap;
+	width: 100%;
+	text-align: center;
+	font-size: 18px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 20px;
 }
 
 @media screen and (max-width: 965px) {

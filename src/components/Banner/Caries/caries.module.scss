@@ -1,0 +1,157 @@
+.wrapper {
+    height: calc(100vh - 80px);
+    background-image: url('./bg.png');
+    background-size: cover;
+}
+
+.wrapperInner {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 50px 0;
+    max-width: 1440px;
+    margin: 0 auto; 
+}
+
+.title {
+    margin-top: -20px;
+    font-size: 75px;
+    text-transform: uppercase;
+    font-weight: 800;
+    user-select: none;
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.description {
+    user-select: none;
+    max-width: 690px;
+    font-size: 26px;
+    line-height: 32px;
+    margin-top: 20px;
+
+    span {
+        color: white;
+        background-color: #2CA1B2;
+        padding: 5px 25px;
+        border-radius: 20px;
+        line-height: 50px;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+}
+
+.buttons {
+    max-width: 800px;
+    margin-top: 150px;
+    display: flex;
+    gap: 40px
+}
+
+.leftBtn {
+    height: 80px;
+    width: 400px;
+    border-radius: 4px;
+    font-size: 24px;
+    font-weight: 600;
+    background-color: #232325;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 100px;
+
+    &:hover {
+        background-color: black;
+    }
+}
+
+// *{outline: auto;}
+
+.mobile {
+    display: none;
+}
+
+@media screen and (max-width: 675px ) {
+    .wrapper {
+        height: 700px;
+        background-image: none;
+    }
+
+    .wrapperInner {
+        height: 521px;
+        padding-inline: 20px;
+        position: relative;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    
+    .title {
+        margin: 150px 0 0;
+        line-height: 32px;
+        font-size: 30px;
+        white-space: nowrap;
+        position: relative;
+        z-index: 2;
+        color: white;
+
+        span {
+            color: white;
+        }
+    }
+
+    .bgMob {
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        z-index: 0;
+    }
+
+    .description {
+        position: relative;
+        z-index: 2;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 22px;
+        color: white;
+        font-weight: 500;
+
+        b {
+            position: relative;
+            z-index: 2;
+            color: white;
+        }
+
+        span {
+            line-height: 30px;
+            font-weight: 600;
+            padding: 5px 20px;
+        }
+    }
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-color: rgba(0,0,0,.3);
+    }
+
+    .buttons {
+        position: relative;
+        z-index: 2;
+        margin-top: 20px;
+    }
+
+    .leftBtn {
+        height: 60px;
+        border-radius: 100px;
+        box-shadow: 0 0 30px 10px rgba(241, 241, 241, 0.2);
+        margin: 0;
+        width: 100%;
+    }
+}

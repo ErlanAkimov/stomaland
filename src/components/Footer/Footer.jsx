@@ -8,7 +8,7 @@ import map from '../../assets/images/map.png';
 
 function Footer() {
 	return (
-		<div style={{ backgroundColor: '#2CA1AE' }}>
+		<div className={styles.mainWrapper}>
 			<footer className={styles.footer}>
 				<div className={styles.l_side}>
 					<div className={styles.title}>Навигация</div>
@@ -42,12 +42,14 @@ function Footer() {
 				<div className={styles.logo}>
 					<img src={logo} alt="" />
 					<h2 className={styles.logo_title}>Stomaland</h2>
-					<p className={styles.logo_text}>cтоматология</p>
+					<p className={styles.logo_text}>cтоматология</p>					
 					<p className={styles.logo_disclamer}>Имеются противопоказания. Необходима консультация специалиста</p>
 				</div>
 
 				<div className={styles.r_side}>
-					<div className={styles.title}>Информация</div>
+					<div className={styles.title}>
+						Информация
+					</div>
 					<div className={styles.info}>
 						<p>
 							stomaland@inbox.ru
@@ -73,6 +75,7 @@ function Footer() {
 						</a>
 					</div>
 				</div>
+					<p className={styles.ooo}>ООО "Медина-Нск"</p>
 			</footer>
 		</div>
 	);

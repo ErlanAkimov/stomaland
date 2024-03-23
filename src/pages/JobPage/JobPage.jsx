@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './job.module.scss';
 import Vacancy from './Vacancy/Vacancy.jsx';
+import Header from '../../components/Header/Header.jsx';
+import Footer from '../../components/Footer/Footer.jsx';
 
 function JobPage() {
 	const vacancies = [
@@ -50,15 +52,21 @@ function JobPage() {
 	}, []);
 
 	return (
-		<div className={styles.wrapper}>
-			<h1 className={styles.h1}>Вакансии</h1>
+		<>
+				<div className={styles.wrapper}>
+					<h1 className={styles.h1}>Вакансии</h1>
 
-			<div className={styles.vacancies_wrapper}>
-				{vacancies.map((item, index) => {
-					return <Vacancy key={index} vacan_data={item} />;
-				})}
-			</div>
-		</div>
+					<div className={styles.vacancies_wrapper}>
+						
+						<p>В данный момент в нашей клинике нет открытых вакансий. <br />Доступные вакансии появятся на этой странице</p>
+						
+						{/* {vacancies.map((item, index) => {
+							return <Vacancy key={index} vacan_data={item} />;
+						})} */}
+					</div>
+				</div>
+		</>
+
 	);
 }
 export default JobPage;

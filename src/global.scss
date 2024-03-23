@@ -1,8 +1,17 @@
+:root {
+  --main-blue-color: #2CA1AE;
+}
+
+
 .wrapper {
-  margin-top: 60px;
   max-width: 1440px;
   padding-inline: 50px;
   margin-inline: auto;
+}
+
+.browser {
+  min-height: calc(100vh - 50px);
+  position: relative;
 }
 
 *{
@@ -28,7 +37,8 @@ body::-webkit-scrollbar {
   }
 }
 
-
-// * {
-//   outline: auto;
-// }
+@media screen and (max-width: 675px) {
+  .wrapper {
+    padding-inline: 20px;
+  }
+}

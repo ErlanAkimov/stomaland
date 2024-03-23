@@ -1,38 +1,46 @@
 import styles from './Banner.module.scss';
-import img from '../../assets/images/banner-gift.png';
-import Birthday from './Birthday/Birthday';
-import FreeVisit from './FreeVisit/FreeVisit';
 import React from 'react';
 
-function Banner({ openModal }) {
-	const banners = [<FreeVisit openModal={openModal} />, <Birthday />];
-	const [active, setActive] = React.useState(0);
-	const [render, setRender] = React.useState(banners[active]);
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
-	const handleDotPicker = (index) => {
-		setActive(index)
-	}
+import { Implant } from './implant/implant';
+import { Caries } from './Caries/caries';
+import { Brackets } from './Brackets/Brackets';
 
-	React.useEffect(() => {
-		setRender(banners[active])
-	}, [active])
+function Banner() {
 	return (
-		<div style={{ position: 'relative' }}>
-			{render}
+		<div className={styles.wrapper}>
+			<Swiper
+				spaceBetween={0}
+				slidesPerView={1}
+				speed={500}
+				autoplay={{
+					delay: 2500,
+					disableOnInteraction: true,
+				}}
+				pagination={{
+					clickable: true,
+				}}
+				navigation={{
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				}}
+				onSwiper={(swiper) => console.log(swiper)}
+				onSlideChange={() => console.log('slide change')}
+			>
+				<SwiperSlide>
+					<Implant />
+				</SwiperSlide>
 
-			<div className={styles.dots}>
-				{banners.map((item, index) => {
-					return (
-						<div
-							key={index}
-							className={
-								active == index ? `${styles.dot} ${styles.active_dot}` : styles.dot
-							}
-							onClick={() => {handleDotPicker(index)}}
-						></div>
-					);
-				})}
-			</div>
+				<SwiperSlide>
+					<Caries />
+				</SwiperSlide>
+
+				<SwiperSlide>
+					<Brackets />
+				</SwiperSlide>
+			</Swiper>
 		</div>
 	);
 }
